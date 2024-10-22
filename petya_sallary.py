@@ -1,6 +1,7 @@
 from datetime import datetime
 
 list_days_in_months = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+week_days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
 
 day = int(input())
 month = int(input())
@@ -32,6 +33,4 @@ if day > 15:
 else:
     res = 15 - day
     
-
-print(res)
-print(time_sallary.isoweekday())
+print(res, week_days[time_sallary.weekday()])
